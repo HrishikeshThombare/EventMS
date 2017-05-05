@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/homePage.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--  jQuery -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+		<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+		<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+		<!-- Bootstrap Date-Picker Plugin -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$(".datepicker").datepicker();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="panel panel-default">
+			    <div class="panel-heading"><h3>New Event</h3></div>
+			    <div class="panel-body">	
+			    	<form class="form-horizontal" action="CORE/createEvent.php" method="POST">
+					    
+					    <div class="form-group">
+					      <label class="control-label col-sm-2" for="email">Title:</label>
+					      <div class="col-sm-10">
+					        <input type="text" name="event_title" class="form-control" id="email" placeholder="Enter email">
+					      </div>
+					    </div>
+					    
+					    <div class="form-group">
+					      <label class="control-label col-sm-2" for="pwd">Description:</label>
+					      <div class="col-sm-10">    
+					       
+					        <textarea name="event_desc" class="form-control"
+   								rows="10" cols="50">Write Description here
+   							</textarea>
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label class="control-label col-sm-2" for="pwd">Venue:</label>
+					      <div class="col-sm-10">  
+					       
+					        <textarea name="event_venue" class="form-control"
+   								rows="5" cols="30">
+   							</textarea>
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label class="control-label col-sm-2" for="pwd">Enter Start Date:</label>
+					      <div class="col-sm-10">
+					        <input class="datepicker" name="event_date"/>
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label class="control-label col-sm-2" for="pwd">Enter Start Date:</label>
+					      <div class="col-sm-10">
+					        <input class="datepicker" name="event_end_date"/>
+					      </div>
+					    </div>
+					    
+					    <div class="form-group">        
+					      <div class="col-sm-offset-2 col-sm-10">
+					        <button type="submit" class="btn btn-default">Create Event</button>
+					      </div>
+					    </div>
+					</form>
+			   	</div>
+			    <div class="panel-footer">
+			    </div>
+		  	</div>
+		</div>
+	</body>
+</html>
